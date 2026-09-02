@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <title>Title</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 1rem;
+        }
+        /*
+        a {
+        display: inline-block;
+        color: #0891b2;
+        cursor: pointer;
+        text-decoration: underline;
+        text-underline-offset: 1px;
+        } */
+
+        /* a:hover {
+        color: #155e75;
+        }
+         */
+        /* p {
+        padding: 0.5rem 0;
+        } */
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+    </style>
+    <script>
+      const myCarousel = new Carousel(document.querySelector("#myCarousel"), {
+        preload: 1
+      });
+
+      Fancybox.assign('[data-fancybox="carousel-gallery"]', {
+        closeButton: "top",
+        Thumbs: false,
+        Carousel: {
+          Dots: true,
+          on: {
+            change: (that) => {
+              myCarousel.slideTo(myCarousel.getPageforSlide(that.page), {
+                friction: 0
+              });
+            }
+          }
+        }
+      });
+
+    </script>
+</head>
+<body>
+<section class="container mt-5">
+    <h1 class="text-center my-5">PinkWalk</h1>
+    <p class="text-center mb-5">Photographer: Jitendra Bajracharya
+    </p>
+    <article class="row row-cols-1 row-cols-sm-2 g-2 d-flex justify-content-center">
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7345.JPG" data-caption="Jiten_230930_026A7345.JPG"><img src="Jiten_230930_026A7345.JPG"/><figcaption>Jiten_230930_026A7345.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7348.JPG" data-caption="Jiten_230930_026A7348.JPG"><img src="Jiten_230930_026A7348.JPG"/><figcaption>Jiten_230930_026A7348.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7350.JPG" data-caption="Jiten_230930_026A7350.JPG"><img src="Jiten_230930_026A7350.JPG"/><figcaption>Jiten_230930_026A7350.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7352.JPG" data-caption="Jiten_230930_026A7352.JPG"><img src="Jiten_230930_026A7352.JPG"/><figcaption>Jiten_230930_026A7352.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7356.JPG" data-caption="Jiten_230930_026A7356.JPG"><img src="Jiten_230930_026A7356.JPG"/><figcaption>Jiten_230930_026A7356.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7357.JPG" data-caption="Jiten_230930_026A7357.JPG"><img src="Jiten_230930_026A7357.JPG"/><figcaption>Jiten_230930_026A7357.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7359.JPG" data-caption="Jiten_230930_026A7359.JPG"><img src="Jiten_230930_026A7359.JPG"/><figcaption>Jiten_230930_026A7359.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7360.JPG" data-caption="Jiten_230930_026A7360.JPG"><img src="Jiten_230930_026A7360.JPG"/><figcaption>Jiten_230930_026A7360.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7362.JPG" data-caption="Jiten_230930_026A7362.JPG"><img src="Jiten_230930_026A7362.JPG"/><figcaption>Jiten_230930_026A7362.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7363.JPG" data-caption="Jiten_230930_026A7363.JPG"><img src="Jiten_230930_026A7363.JPG"/><figcaption>Jiten_230930_026A7363.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7366.JPG" data-caption="Jiten_230930_026A7366.JPG"><img src="Jiten_230930_026A7366.JPG"/><figcaption>Jiten_230930_026A7366.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7369.JPG" data-caption="Jiten_230930_026A7369.JPG"><img src="Jiten_230930_026A7369.JPG"/><figcaption>Jiten_230930_026A7369.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7371.JPG" data-caption="Jiten_230930_026A7371.JPG"><img src="Jiten_230930_026A7371.JPG"/><figcaption>Jiten_230930_026A7371.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7372.JPG" data-caption="Jiten_230930_026A7372.JPG"><img src="Jiten_230930_026A7372.JPG"/><figcaption>Jiten_230930_026A7372.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7373.JPG" data-caption="Jiten_230930_026A7373.JPG"><img src="Jiten_230930_026A7373.JPG"/><figcaption>Jiten_230930_026A7373.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7375.JPG" data-caption="Jiten_230930_026A7375.JPG"><img src="Jiten_230930_026A7375.JPG"/><figcaption>Jiten_230930_026A7375.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7378.JPG" data-caption="Jiten_230930_026A7378.JPG"><img src="Jiten_230930_026A7378.JPG"/><figcaption>Jiten_230930_026A7378.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7379.JPG" data-caption="Jiten_230930_026A7379.JPG"><img src="Jiten_230930_026A7379.JPG"/><figcaption>Jiten_230930_026A7379.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7381.JPG" data-caption="Jiten_230930_026A7381.JPG"><img src="Jiten_230930_026A7381.JPG"/><figcaption>Jiten_230930_026A7381.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7386.JPG" data-caption="Jiten_230930_026A7386.JPG"><img src="Jiten_230930_026A7386.JPG"/><figcaption>Jiten_230930_026A7386.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7387.JPG" data-caption="Jiten_230930_026A7387.JPG"><img src="Jiten_230930_026A7387.JPG"/><figcaption>Jiten_230930_026A7387.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7388.JPG" data-caption="Jiten_230930_026A7388.JPG"><img src="Jiten_230930_026A7388.JPG"/><figcaption>Jiten_230930_026A7388.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7390.JPG" data-caption="Jiten_230930_026A7390.JPG"><img src="Jiten_230930_026A7390.JPG"/><figcaption>Jiten_230930_026A7390.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7391.JPG" data-caption="Jiten_230930_026A7391.JPG"><img src="Jiten_230930_026A7391.JPG"/><figcaption>Jiten_230930_026A7391.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7395.JPG" data-caption="Jiten_230930_026A7395.JPG"><img src="Jiten_230930_026A7395.JPG"/><figcaption>Jiten_230930_026A7395.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7397.JPG" data-caption="Jiten_230930_026A7397.JPG"><img src="Jiten_230930_026A7397.JPG"/><figcaption>Jiten_230930_026A7397.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7399.JPG" data-caption="Jiten_230930_026A7399.JPG"><img src="Jiten_230930_026A7399.JPG"/><figcaption>Jiten_230930_026A7399.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7401.JPG" data-caption="Jiten_230930_026A7401.JPG"><img src="Jiten_230930_026A7401.JPG"/><figcaption>Jiten_230930_026A7401.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7404.JPG" data-caption="Jiten_230930_026A7404.JPG"><img src="Jiten_230930_026A7404.JPG"/><figcaption>Jiten_230930_026A7404.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7406.JPG" data-caption="Jiten_230930_026A7406.JPG"><img src="Jiten_230930_026A7406.JPG"/><figcaption>Jiten_230930_026A7406.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7407.JPG" data-caption="Jiten_230930_026A7407.JPG"><img src="Jiten_230930_026A7407.JPG"/><figcaption>Jiten_230930_026A7407.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7411.JPG" data-caption="Jiten_230930_026A7411.JPG"><img src="Jiten_230930_026A7411.JPG"/><figcaption>Jiten_230930_026A7411.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7412.JPG" data-caption="Jiten_230930_026A7412.JPG"><img src="Jiten_230930_026A7412.JPG"/><figcaption>Jiten_230930_026A7412.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7414.JPG" data-caption="Jiten_230930_026A7414.JPG"><img src="Jiten_230930_026A7414.JPG"/><figcaption>Jiten_230930_026A7414.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7419.JPG" data-caption="Jiten_230930_026A7419.JPG"><img src="Jiten_230930_026A7419.JPG"/><figcaption>Jiten_230930_026A7419.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7421.JPG" data-caption="Jiten_230930_026A7421.JPG"><img src="Jiten_230930_026A7421.JPG"/><figcaption>Jiten_230930_026A7421.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7423.JPG" data-caption="Jiten_230930_026A7423.JPG"><img src="Jiten_230930_026A7423.JPG"/><figcaption>Jiten_230930_026A7423.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7424.JPG" data-caption="Jiten_230930_026A7424.JPG"><img src="Jiten_230930_026A7424.JPG"/><figcaption>Jiten_230930_026A7424.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7429.JPG" data-caption="Jiten_230930_026A7429.JPG"><img src="Jiten_230930_026A7429.JPG"/><figcaption>Jiten_230930_026A7429.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7432.JPG" data-caption="Jiten_230930_026A7432.JPG"><img src="Jiten_230930_026A7432.JPG"/><figcaption>Jiten_230930_026A7432.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7433.JPG" data-caption="Jiten_230930_026A7433.JPG"><img src="Jiten_230930_026A7433.JPG"/><figcaption>Jiten_230930_026A7433.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7434.JPG" data-caption="Jiten_230930_026A7434.JPG"><img src="Jiten_230930_026A7434.JPG"/><figcaption>Jiten_230930_026A7434.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7437.JPG" data-caption="Jiten_230930_026A7437.JPG"><img src="Jiten_230930_026A7437.JPG"/><figcaption>Jiten_230930_026A7437.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7438.JPG" data-caption="Jiten_230930_026A7438.JPG"><img src="Jiten_230930_026A7438.JPG"/><figcaption>Jiten_230930_026A7438.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7440.JPG" data-caption="Jiten_230930_026A7440.JPG"><img src="Jiten_230930_026A7440.JPG"/><figcaption>Jiten_230930_026A7440.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7441.JPG" data-caption="Jiten_230930_026A7441.JPG"><img src="Jiten_230930_026A7441.JPG"/><figcaption>Jiten_230930_026A7441.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7442.JPG" data-caption="Jiten_230930_026A7442.JPG"><img src="Jiten_230930_026A7442.JPG"/><figcaption>Jiten_230930_026A7442.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7444.JPG" data-caption="Jiten_230930_026A7444.JPG"><img src="Jiten_230930_026A7444.JPG"/><figcaption>Jiten_230930_026A7444.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7446.JPG" data-caption="Jiten_230930_026A7446.JPG"><img src="Jiten_230930_026A7446.JPG"/><figcaption>Jiten_230930_026A7446.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7452.JPG" data-caption="Jiten_230930_026A7452.JPG"><img src="Jiten_230930_026A7452.JPG"/><figcaption>Jiten_230930_026A7452.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7455.JPG" data-caption="Jiten_230930_026A7455.JPG"><img src="Jiten_230930_026A7455.JPG"/><figcaption>Jiten_230930_026A7455.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7467.JPG" data-caption="Jiten_230930_026A7467.JPG"><img src="Jiten_230930_026A7467.JPG"/><figcaption>Jiten_230930_026A7467.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7474.JPG" data-caption="Jiten_230930_026A7474.JPG"><img src="Jiten_230930_026A7474.JPG"/><figcaption>Jiten_230930_026A7474.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7475.JPG" data-caption="Jiten_230930_026A7475.JPG"><img src="Jiten_230930_026A7475.JPG"/><figcaption>Jiten_230930_026A7475.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7477.JPG" data-caption="Jiten_230930_026A7477.JPG"><img src="Jiten_230930_026A7477.JPG"/><figcaption>Jiten_230930_026A7477.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7478.JPG" data-caption="Jiten_230930_026A7478.JPG"><img src="Jiten_230930_026A7478.JPG"/><figcaption>Jiten_230930_026A7478.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7486.JPG" data-caption="Jiten_230930_026A7486.JPG"><img src="Jiten_230930_026A7486.JPG"/><figcaption>Jiten_230930_026A7486.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7488.JPG" data-caption="Jiten_230930_026A7488.JPG"><img src="Jiten_230930_026A7488.JPG"/><figcaption>Jiten_230930_026A7488.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7490.JPG" data-caption="Jiten_230930_026A7490.JPG"><img src="Jiten_230930_026A7490.JPG"/><figcaption>Jiten_230930_026A7490.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7495.JPG" data-caption="Jiten_230930_026A7495.JPG"><img src="Jiten_230930_026A7495.JPG"/><figcaption>Jiten_230930_026A7495.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7497.JPG" data-caption="Jiten_230930_026A7497.JPG"><img src="Jiten_230930_026A7497.JPG"/><figcaption>Jiten_230930_026A7497.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7499.JPG" data-caption="Jiten_230930_026A7499.JPG"><img src="Jiten_230930_026A7499.JPG"/><figcaption>Jiten_230930_026A7499.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7504.JPG" data-caption="Jiten_230930_026A7504.JPG"><img src="Jiten_230930_026A7504.JPG"/><figcaption>Jiten_230930_026A7504.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7505.JPG" data-caption="Jiten_230930_026A7505.JPG"><img src="Jiten_230930_026A7505.JPG"/><figcaption>Jiten_230930_026A7505.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7507.JPG" data-caption="Jiten_230930_026A7507.JPG"><img src="Jiten_230930_026A7507.JPG"/><figcaption>Jiten_230930_026A7507.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7508.JPG" data-caption="Jiten_230930_026A7508.JPG"><img src="Jiten_230930_026A7508.JPG"/><figcaption>Jiten_230930_026A7508.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7509.JPG" data-caption="Jiten_230930_026A7509.JPG"><img src="Jiten_230930_026A7509.JPG"/><figcaption>Jiten_230930_026A7509.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7514.JPG" data-caption="Jiten_230930_026A7514.JPG"><img src="Jiten_230930_026A7514.JPG"/><figcaption>Jiten_230930_026A7514.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7515.JPG" data-caption="Jiten_230930_026A7515.JPG"><img src="Jiten_230930_026A7515.JPG"/><figcaption>Jiten_230930_026A7515.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7518.JPG" data-caption="Jiten_230930_026A7518.JPG"><img src="Jiten_230930_026A7518.JPG"/><figcaption>Jiten_230930_026A7518.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7520.JPG" data-caption="Jiten_230930_026A7520.JPG"><img src="Jiten_230930_026A7520.JPG"/><figcaption>Jiten_230930_026A7520.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7522.JPG" data-caption="Jiten_230930_026A7522.JPG"><img src="Jiten_230930_026A7522.JPG"/><figcaption>Jiten_230930_026A7522.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7524.JPG" data-caption="Jiten_230930_026A7524.JPG"><img src="Jiten_230930_026A7524.JPG"/><figcaption>Jiten_230930_026A7524.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7528.JPG" data-caption="Jiten_230930_026A7528.JPG"><img src="Jiten_230930_026A7528.JPG"/><figcaption>Jiten_230930_026A7528.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7531.JPG" data-caption="Jiten_230930_026A7531.JPG"><img src="Jiten_230930_026A7531.JPG"/><figcaption>Jiten_230930_026A7531.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7532.JPG" data-caption="Jiten_230930_026A7532.JPG"><img src="Jiten_230930_026A7532.JPG"/><figcaption>Jiten_230930_026A7532.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7533.JPG" data-caption="Jiten_230930_026A7533.JPG"><img src="Jiten_230930_026A7533.JPG"/><figcaption>Jiten_230930_026A7533.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7539.JPG" data-caption="Jiten_230930_026A7539.JPG"><img src="Jiten_230930_026A7539.JPG"/><figcaption>Jiten_230930_026A7539.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7547.JPG" data-caption="Jiten_230930_026A7547.JPG"><img src="Jiten_230930_026A7547.JPG"/><figcaption>Jiten_230930_026A7547.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7549.JPG" data-caption="Jiten_230930_026A7549.JPG"><img src="Jiten_230930_026A7549.JPG"/><figcaption>Jiten_230930_026A7549.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7561.JPG" data-caption="Jiten_230930_026A7561.JPG"><img src="Jiten_230930_026A7561.JPG"/><figcaption>Jiten_230930_026A7561.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7562.JPG" data-caption="Jiten_230930_026A7562.JPG"><img src="Jiten_230930_026A7562.JPG"/><figcaption>Jiten_230930_026A7562.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7566.JPG" data-caption="Jiten_230930_026A7566.JPG"><img src="Jiten_230930_026A7566.JPG"/><figcaption>Jiten_230930_026A7566.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7567.JPG" data-caption="Jiten_230930_026A7567.JPG"><img src="Jiten_230930_026A7567.JPG"/><figcaption>Jiten_230930_026A7567.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7568.JPG" data-caption="Jiten_230930_026A7568.JPG"><img src="Jiten_230930_026A7568.JPG"/><figcaption>Jiten_230930_026A7568.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7573.JPG" data-caption="Jiten_230930_026A7573.JPG"><img src="Jiten_230930_026A7573.JPG"/><figcaption>Jiten_230930_026A7573.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_026A7575.JPG" data-caption="Jiten_230930_026A7575.JPG"><img src="Jiten_230930_026A7575.JPG"/><figcaption>Jiten_230930_026A7575.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5029.JPG" data-cation="Jiten_230930_R2A5029.JPG"><img src="Jiten_230930_R2A5029.JPG"/><figcaption>Jiten_230930_R2A5029.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5030.JPG" data-cation="Jiten_230930_R2A5030.JPG"><img src="Jiten_230930_R2A5030.JPG"/><figcaption>Jiten_230930_R2A5030.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5034.JPG" data-cation="Jiten_230930_R2A5034.JPG"><img src="Jiten_230930_R2A5034.JPG"/><figcaption>Jiten_230930_R2A5034.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5039.JPG" data-cation="Jiten_230930_R2A5039.JPG"><img src="Jiten_230930_R2A5039.JPG"/><figcaption>Jiten_230930_R2A5039.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5042.JPG" data-cation="Jiten_230930_R2A5042.JPG"><img src="Jiten_230930_R2A5042.JPG"/><figcaption>Jiten_230930_R2A5042.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5046.JPG" data-cation="Jiten_230930_R2A5046.JPG"><img src="Jiten_230930_R2A5046.JPG"/><figcaption>Jiten_230930_R2A5046.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5047.JPG" data-cation="Jiten_230930_R2A5047.JPG"><img src="Jiten_230930_R2A5047.JPG"/><figcaption>Jiten_230930_R2A5047.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5049.JPG" data-cation="Jiten_230930_R2A5049.JPG"><img src="Jiten_230930_R2A5049.JPG"/><figcaption>Jiten_230930_R2A5049.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5052.JPG" data-cation="Jiten_230930_R2A5052.JPG"><img src="Jiten_230930_R2A5052.JPG"/><figcaption>Jiten_230930_R2A5052.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5053.JPG" data-cation="Jiten_230930_R2A5053.JPG"><img src="Jiten_230930_R2A5053.JPG"/><figcaption>Jiten_230930_R2A5053.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5054.JPG" data-cation="Jiten_230930_R2A5054.JPG"><img src="Jiten_230930_R2A5054.JPG"/><figcaption>Jiten_230930_R2A5054.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5057.JPG" data-cation="Jiten_230930_R2A5057.JPG"><img src="Jiten_230930_R2A5057.JPG"/><figcaption>Jiten_230930_R2A5057.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5059.JPG" data-cation="Jiten_230930_R2A5059.JPG"><img src="Jiten_230930_R2A5059.JPG"/><figcaption>Jiten_230930_R2A5059.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5061.JPG" data-cation="Jiten_230930_R2A5061.JPG"><img src="Jiten_230930_R2A5061.JPG"/><figcaption>Jiten_230930_R2A5061.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5062.JPG" data-cation="Jiten_230930_R2A5062.JPG"><img src="Jiten_230930_R2A5062.JPG"/><figcaption>Jiten_230930_R2A5062.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5065.JPG" data-cation="Jiten_230930_R2A5065.JPG"><img src="Jiten_230930_R2A5065.JPG"/><figcaption>Jiten_230930_R2A5065.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5066.JPG" data-cation="Jiten_230930_R2A5066.JPG"><img src="Jiten_230930_R2A5066.JPG"/><figcaption>Jiten_230930_R2A5066.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5068.JPG" data-cation="Jiten_230930_R2A5068.JPG"><img src="Jiten_230930_R2A5068.JPG"/><figcaption>Jiten_230930_R2A5068.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5073.JPG" data-cation="Jiten_230930_R2A5073.JPG"><img src="Jiten_230930_R2A5073.JPG"/><figcaption>Jiten_230930_R2A5073.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5075.JPG" data-cation="Jiten_230930_R2A5075.JPG"><img src="Jiten_230930_R2A5075.JPG"/><figcaption>Jiten_230930_R2A5075.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5077.JPG" data-cation="Jiten_230930_R2A5077.JPG"><img src="Jiten_230930_R2A5077.JPG"/><figcaption>Jiten_230930_R2A5077.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5079.JPG" data-cation="Jiten_230930_R2A5079.JPG"><img src="Jiten_230930_R2A5079.JPG"/><figcaption>Jiten_230930_R2A5079.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5083.JPG" data-cation="Jiten_230930_R2A5083.JPG"><img src="Jiten_230930_R2A5083.JPG"/><figcaption>Jiten_230930_R2A5083.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5086.JPG" data-cation="Jiten_230930_R2A5086.JPG"><img src="Jiten_230930_R2A5086.JPG"/><figcaption>Jiten_230930_R2A5086.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5091.JPG" data-cation="Jiten_230930_R2A5091.JPG"><img src="Jiten_230930_R2A5091.JPG"/><figcaption>Jiten_230930_R2A5091.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5093.JPG" data-cation="Jiten_230930_R2A5093.JPG"><img src="Jiten_230930_R2A5093.JPG"/><figcaption>Jiten_230930_R2A5093.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5098.JPG" data-cation="Jiten_230930_R2A5098.JPG"><img src="Jiten_230930_R2A5098.JPG"/><figcaption>Jiten_230930_R2A5098.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5099.JPG" data-cation="Jiten_230930_R2A5099.JPG"><img src="Jiten_230930_R2A5099.JPG"/><figcaption>Jiten_230930_R2A5099.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5102.JPG" data-cation="Jiten_230930_R2A5102.JPG"><img src="Jiten_230930_R2A5102.JPG"/><figcaption>Jiten_230930_R2A5102.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5103.JPG" data-cation="Jiten_230930_R2A5103.JPG"><img src="Jiten_230930_R2A5103.JPG"/><figcaption>Jiten_230930_R2A5103.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5105.JPG" data-cation="Jiten_230930_R2A5105.JPG"><img src="Jiten_230930_R2A5105.JPG"/><figcaption>Jiten_230930_R2A5105.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5107.JPG" data-cation="Jiten_230930_R2A5107.JPG"><img src="Jiten_230930_R2A5107.JPG"/><figcaption>Jiten_230930_R2A5107.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5113.JPG" data-cation="Jiten_230930_R2A5113.JPG"><img src="Jiten_230930_R2A5113.JPG"/><figcaption>Jiten_230930_R2A5113.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5115.JPG" data-cation="Jiten_230930_R2A5115.JPG"><img src="Jiten_230930_R2A5115.JPG"/><figcaption>Jiten_230930_R2A5115.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5121.JPG" data-cation="Jiten_230930_R2A5121.JPG"><img src="Jiten_230930_R2A5121.JPG"/><figcaption>Jiten_230930_R2A5121.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5123.JPG" data-cation="Jiten_230930_R2A5123.JPG"><img src="Jiten_230930_R2A5123.JPG"/><figcaption>Jiten_230930_R2A5123.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5125.JPG" data-cation="Jiten_230930_R2A5125.JPG"><img src="Jiten_230930_R2A5125.JPG"/><figcaption>Jiten_230930_R2A5125.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5127.JPG" data-cation="Jiten_230930_R2A5127.JPG"><img src="Jiten_230930_R2A5127.JPG"/><figcaption>Jiten_230930_R2A5127.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5128.JPG" data-cation="Jiten_230930_R2A5128.JPG"><img src="Jiten_230930_R2A5128.JPG"/><figcaption>Jiten_230930_R2A5128.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5134.JPG" data-cation="Jiten_230930_R2A5134.JPG"><img src="Jiten_230930_R2A5134.JPG"/><figcaption>Jiten_230930_R2A5134.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5136.JPG" data-cation="Jiten_230930_R2A5136.JPG"><img src="Jiten_230930_R2A5136.JPG"/><figcaption>Jiten_230930_R2A5136.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5145.JPG" data-cation="Jiten_230930_R2A5145.JPG"><img src="Jiten_230930_R2A5145.JPG"/><figcaption>Jiten_230930_R2A5145.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5146.JPG" data-cation="Jiten_230930_R2A5146.JPG"><img src="Jiten_230930_R2A5146.JPG"/><figcaption>Jiten_230930_R2A5146.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5151.JPG" data-cation="Jiten_230930_R2A5151.JPG"><img src="Jiten_230930_R2A5151.JPG"/><figcaption>Jiten_230930_R2A5151.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5161.JPG" data-cation="Jiten_230930_R2A5161.JPG"><img src="Jiten_230930_R2A5161.JPG"/><figcaption>Jiten_230930_R2A5161.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5163.JPG" data-cation="Jiten_230930_R2A5163.JPG"><img src="Jiten_230930_R2A5163.JPG"/><figcaption>Jiten_230930_R2A5163.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5167.JPG" data-cation="Jiten_230930_R2A5167.JPG"><img src="Jiten_230930_R2A5167.JPG"/><figcaption>Jiten_230930_R2A5167.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5171.JPG" data-cation="Jiten_230930_R2A5171.JPG"><img src="Jiten_230930_R2A5171.JPG"/><figcaption>Jiten_230930_R2A5171.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5175.JPG" data-cation="Jiten_230930_R2A5175.JPG"><img src="Jiten_230930_R2A5175.JPG"/><figcaption>Jiten_230930_R2A5175.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5181.JPG" data-cation="Jiten_230930_R2A5181.JPG"><img src="Jiten_230930_R2A5181.JPG"/><figcaption>Jiten_230930_R2A5181.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5184.JPG" data-cation="Jiten_230930_R2A5184.JPG"><img src="Jiten_230930_R2A5184.JPG"/><figcaption>Jiten_230930_R2A5184.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5195.JPG" data-cation="Jiten_230930_R2A5195.JPG"><img src="Jiten_230930_R2A5195.JPG"/><figcaption>Jiten_230930_R2A5195.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5196.JPG" data-cation="Jiten_230930_R2A5196.JPG"><img src="Jiten_230930_R2A5196.JPG"/><figcaption>Jiten_230930_R2A5196.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5198.JPG" data-cation="Jiten_230930_R2A5198.JPG"><img src="Jiten_230930_R2A5198.JPG"/><figcaption>Jiten_230930_R2A5198.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5204.JPG" data-cation="Jiten_230930_R2A5204.JPG"><img src="Jiten_230930_R2A5204.JPG"/><figcaption>Jiten_230930_R2A5204.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5205.JPG" data-cation="Jiten_230930_R2A5205.JPG"><img src="Jiten_230930_R2A5205.JPG"/><figcaption>Jiten_230930_R2A5205.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5211.JPG" data-cation="Jiten_230930_R2A5211.JPG"><img src="Jiten_230930_R2A5211.JPG"/><figcaption>Jiten_230930_R2A5211.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5215.JPG" data-cation="Jiten_230930_R2A5215.JPG"><img src="Jiten_230930_R2A5215.JPG"/><figcaption>Jiten_230930_R2A5215.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5217.JPG" data-cation="Jiten_230930_R2A5217.JPG"><img src="Jiten_230930_R2A5217.JPG"/><figcaption>Jiten_230930_R2A5217.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5219.JPG" data-cation="Jiten_230930_R2A5219.JPG"><img src="Jiten_230930_R2A5219.JPG"/><figcaption>Jiten_230930_R2A5219.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5228.JPG" data-cation="Jiten_230930_R2A5228.JPG"><img src="Jiten_230930_R2A5228.JPG"/><figcaption>Jiten_230930_R2A5228.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5229.JPG" data-cation="Jiten_230930_R2A5229.JPG"><img src="Jiten_230930_R2A5229.JPG"/><figcaption>Jiten_230930_R2A5229.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5230.JPG" data-cation="Jiten_230930_R2A5230.JPG"><img src="Jiten_230930_R2A5230.JPG"/><figcaption>Jiten_230930_R2A5230.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5231.JPG" data-cation="Jiten_230930_R2A5231.JPG"><img src="Jiten_230930_R2A5231.JPG"/><figcaption>Jiten_230930_R2A5231.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5232.JPG" data-cation="Jiten_230930_R2A5232.JPG"><img src="Jiten_230930_R2A5232.JPG"/><figcaption>Jiten_230930_R2A5232.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5233.JPG" data-cation="Jiten_230930_R2A5233.JPG"><img src="Jiten_230930_R2A5233.JPG"/><figcaption>Jiten_230930_R2A5233.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5235.JPG" data-cation="Jiten_230930_R2A5235.JPG"><img src="Jiten_230930_R2A5235.JPG"/><figcaption>Jiten_230930_R2A5235.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5236.JPG" data-cation="Jiten_230930_R2A5236.JPG"><img src="Jiten_230930_R2A5236.JPG"/><figcaption>Jiten_230930_R2A5236.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5237.JPG" data-cation="Jiten_230930_R2A5237.JPG"><img src="Jiten_230930_R2A5237.JPG"/><figcaption>Jiten_230930_R2A5237.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5239.JPG" data-cation="Jiten_230930_R2A5239.JPG"><img src="Jiten_230930_R2A5239.JPG"/><figcaption>Jiten_230930_R2A5239.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5240.JPG" data-cation="Jiten_230930_R2A5240.JPG"><img src="Jiten_230930_R2A5240.JPG"/><figcaption>Jiten_230930_R2A5240.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5242.JPG" data-cation="Jiten_230930_R2A5242.JPG"><img src="Jiten_230930_R2A5242.JPG"/><figcaption>Jiten_230930_R2A5242.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5247.JPG" data-cation="Jiten_230930_R2A5247.JPG"><img src="Jiten_230930_R2A5247.JPG"/><figcaption>Jiten_230930_R2A5247.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5249.JPG" data-cation="Jiten_230930_R2A5249.JPG"><img src="Jiten_230930_R2A5249.JPG"/><figcaption>Jiten_230930_R2A5249.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5250.JPG" data-cation="Jiten_230930_R2A5250.JPG"><img src="Jiten_230930_R2A5250.JPG"/><figcaption>Jiten_230930_R2A5250.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5251.JPG" data-cation="Jiten_230930_R2A5251.JPG"><img src="Jiten_230930_R2A5251.JPG"/><figcaption>Jiten_230930_R2A5251.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5252.JPG" data-cation="Jiten_230930_R2A5252.JPG"><img src="Jiten_230930_R2A5252.JPG"/><figcaption>Jiten_230930_R2A5252.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5253.JPG" data-cation="Jiten_230930_R2A5253.JPG"><img src="Jiten_230930_R2A5253.JPG"/><figcaption>Jiten_230930_R2A5253.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5257.JPG" data-cation="Jiten_230930_R2A5257.JPG"><img src="Jiten_230930_R2A5257.JPG"/><figcaption>Jiten_230930_R2A5257.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5259.JPG" data-cation="Jiten_230930_R2A5259.JPG"><img src="Jiten_230930_R2A5259.JPG"/><figcaption>Jiten_230930_R2A5259.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5263.JPG" data-cation="Jiten_230930_R2A5263.JPG"><img src="Jiten_230930_R2A5263.JPG"/><figcaption>Jiten_230930_R2A5263.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5266.JPG" data-cation="Jiten_230930_R2A5266.JPG"><img src="Jiten_230930_R2A5266.JPG"/><figcaption>Jiten_230930_R2A5266.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5270.JPG" data-cation="Jiten_230930_R2A5270.JPG"><img src="Jiten_230930_R2A5270.JPG"/><figcaption>Jiten_230930_R2A5270.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5278.JPG" data-cation="Jiten_230930_R2A5278.JPG"><img src="Jiten_230930_R2A5278.JPG"/><figcaption>Jiten_230930_R2A5278.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5279.JPG" data-cation="Jiten_230930_R2A5279.JPG"><img src="Jiten_230930_R2A5279.JPG"/><figcaption>Jiten_230930_R2A5279.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5282.JPG" data-cation="Jiten_230930_R2A5282.JPG"><img src="Jiten_230930_R2A5282.JPG"/><figcaption>Jiten_230930_R2A5282.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5284.JPG" data-cation="Jiten_230930_R2A5284.JPG"><img src="Jiten_230930_R2A5284.JPG"/><figcaption>Jiten_230930_R2A5284.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5286.JPG" data-cation="Jiten_230930_R2A5286.JPG"><img src="Jiten_230930_R2A5286.JPG"/><figcaption>Jiten_230930_R2A5286.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5288.JPG" data-cation="Jiten_230930_R2A5288.JPG"><img src="Jiten_230930_R2A5288.JPG"/><figcaption>Jiten_230930_R2A5288.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5293.JPG" data-cation="Jiten_230930_R2A5293.JPG"><img src="Jiten_230930_R2A5293.JPG"/><figcaption>Jiten_230930_R2A5293.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5296.JPG" data-cation="Jiten_230930_R2A5296.JPG"><img src="Jiten_230930_R2A5296.JPG"/><figcaption>Jiten_230930_R2A5296.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5298.JPG" data-cation="Jiten_230930_R2A5298.JPG"><img src="Jiten_230930_R2A5298.JPG"/><figcaption>Jiten_230930_R2A5298.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5299.JPG" data-cation="Jiten_230930_R2A5299.JPG"><img src="Jiten_230930_R2A5299.JPG"/><figcaption>Jiten_230930_R2A5299.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5301.JPG" data-cation="Jiten_230930_R2A5301.JPG"><img src="Jiten_230930_R2A5301.JPG"/><figcaption>Jiten_230930_R2A5301.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5302.JPG" data-cation="Jiten_230930_R2A5302.JPG"><img src="Jiten_230930_R2A5302.JPG"/><figcaption>Jiten_230930_R2A5302.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5304.JPG" data-cation="Jiten_230930_R2A5304.JPG"><img src="Jiten_230930_R2A5304.JPG"/><figcaption>Jiten_230930_R2A5304.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5305.JPG" data-cation="Jiten_230930_R2A5305.JPG"><img src="Jiten_230930_R2A5305.JPG"/><figcaption>Jiten_230930_R2A5305.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5306.JPG" data-cation="Jiten_230930_R2A5306.JPG"><img src="Jiten_230930_R2A5306.JPG"/><figcaption>Jiten_230930_R2A5306.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5307.JPG" data-cation="Jiten_230930_R2A5307.JPG"><img src="Jiten_230930_R2A5307.JPG"/><figcaption>Jiten_230930_R2A5307.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5311.JPG" data-cation="Jiten_230930_R2A5311.JPG"><img src="Jiten_230930_R2A5311.JPG"/><figcaption>Jiten_230930_R2A5311.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5313.JPG" data-cation="Jiten_230930_R2A5313.JPG"><img src="Jiten_230930_R2A5313.JPG"/><figcaption>Jiten_230930_R2A5313.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5314.JPG" data-cation="Jiten_230930_R2A5314.JPG"><img src="Jiten_230930_R2A5314.JPG"/><figcaption>Jiten_230930_R2A5314.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5315.JPG" data-cation="Jiten_230930_R2A5315.JPG"><img src="Jiten_230930_R2A5315.JPG"/><figcaption>Jiten_230930_R2A5315.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5319.JPG" data-cation="Jiten_230930_R2A5319.JPG"><img src="Jiten_230930_R2A5319.JPG"/><figcaption>Jiten_230930_R2A5319.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5321.JPG" data-cation="Jiten_230930_R2A5321.JPG"><img src="Jiten_230930_R2A5321.JPG"/><figcaption>Jiten_230930_R2A5321.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5322.JPG" data-cation="Jiten_230930_R2A5322.JPG"><img src="Jiten_230930_R2A5322.JPG"/><figcaption>Jiten_230930_R2A5322.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5324.JPG" data-cation="Jiten_230930_R2A5324.JPG"><img src="Jiten_230930_R2A5324.JPG"/><figcaption>Jiten_230930_R2A5324.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5326.JPG" data-cation="Jiten_230930_R2A5326.JPG"><img src="Jiten_230930_R2A5326.JPG"/><figcaption>Jiten_230930_R2A5326.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5328.JPG" data-cation="Jiten_230930_R2A5328.JPG"><img src="Jiten_230930_R2A5328.JPG"/><figcaption>Jiten_230930_R2A5328.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5331.JPG" data-cation="Jiten_230930_R2A5331.JPG"><img src="Jiten_230930_R2A5331.JPG"/><figcaption>Jiten_230930_R2A5331.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5333.JPG" data-cation="Jiten_230930_R2A5333.JPG"><img src="Jiten_230930_R2A5333.JPG"/><figcaption>Jiten_230930_R2A5333.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5334.JPG" data-cation="Jiten_230930_R2A5334.JPG"><img src="Jiten_230930_R2A5334.JPG"/><figcaption>Jiten_230930_R2A5334.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5339.JPG" data-cation="Jiten_230930_R2A5339.JPG"><img src="Jiten_230930_R2A5339.JPG"/><figcaption>Jiten_230930_R2A5339.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5343.JPG" data-cation="Jiten_230930_R2A5343.JPG"><img src="Jiten_230930_R2A5343.JPG"/><figcaption>Jiten_230930_R2A5343.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5345.JPG" data-cation="Jiten_230930_R2A5345.JPG"><img src="Jiten_230930_R2A5345.JPG"/><figcaption>Jiten_230930_R2A5345.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5347.JPG" data-cation="Jiten_230930_R2A5347.JPG"><img src="Jiten_230930_R2A5347.JPG"/><figcaption>Jiten_230930_R2A5347.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5354.JPG" data-cation="Jiten_230930_R2A5354.JPG"><img src="Jiten_230930_R2A5354.JPG"/><figcaption>Jiten_230930_R2A5354.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5357.JPG" data-cation="Jiten_230930_R2A5357.JPG"><img src="Jiten_230930_R2A5357.JPG"/><figcaption>Jiten_230930_R2A5357.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5358.JPG" data-cation="Jiten_230930_R2A5358.JPG"><img src="Jiten_230930_R2A5358.JPG"/><figcaption>Jiten_230930_R2A5358.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5359.JPG" data-cation="Jiten_230930_R2A5359.JPG"><img src="Jiten_230930_R2A5359.JPG"/><figcaption>Jiten_230930_R2A5359.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5360.JPG" data-cation="Jiten_230930_R2A5360.JPG"><img src="Jiten_230930_R2A5360.JPG"/><figcaption>Jiten_230930_R2A5360.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5363.JPG" data-cation="Jiten_230930_R2A5363.JPG"><img src="Jiten_230930_R2A5363.JPG"/><figcaption>Jiten_230930_R2A5363.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5364.JPG" data-cation="Jiten_230930_R2A5364.JPG"><img src="Jiten_230930_R2A5364.JPG"/><figcaption>Jiten_230930_R2A5364.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5368.JPG" data-cation="Jiten_230930_R2A5368.JPG"><img src="Jiten_230930_R2A5368.JPG"/><figcaption>Jiten_230930_R2A5368.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5369.JPG" data-cation="Jiten_230930_R2A5369.JPG"><img src="Jiten_230930_R2A5369.JPG"/><figcaption>Jiten_230930_R2A5369.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5377.JPG" data-cation="Jiten_230930_R2A5377.JPG"><img src="Jiten_230930_R2A5377.JPG"/><figcaption>Jiten_230930_R2A5377.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5379.JPG" data-cation="Jiten_230930_R2A5379.JPG"><img src="Jiten_230930_R2A5379.JPG"/><figcaption>Jiten_230930_R2A5379.JPG</figcaption></a></div>
+        <div class="col-sm-6 col-md-3 mb-4 text-center"><a data-fancybox="gallery" data-src="Jiten_230930_R2A5381.JPG" data-cation="Jiten_230930_R2A5381.JPG"><img src="Jiten_230930_R2A5381.JPG"/><figcaption>Jiten_230930_R2A5381.JPG</figcaption></a></div>
+    </article>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+  Fancybox.bind('[data-fancybox="gallery"]', {
+    //
+  });
+</script>
+</body>
+</html>
