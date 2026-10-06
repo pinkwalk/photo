@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PinkWalk 2026 — Photo Gallery</title>
+    <meta name="description" content="Official PinkWalk 2026 Photo Gallery containing high-resolution event photography.">
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    
+    <!-- Google Fonts: Sen for Headings, Outfit for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sen:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+    <style>
+        :root {
+            --primary-pink: #ec008c;
+            --primary-pink-hover: #d0007b;
+            --rose-dark: #db2777;
+            --blush-bg: #fbf9fa;
+            --blush-card: #fdf2f8;
+            --plum-dark: #2a121d;
+            --plum-darker: #1c0d15;
+            --border-pink-light: #fbcfe8;
+            --border-pink-subtle: rgba(236, 0, 140, 0.15);
+            --text-heading: #1e1319;
+            --text-body: #2d1e26;
+            --text-muted: #6e5d67;
+            --shadow-pink: 0 4px 14px 0 rgba(236, 0, 140, 0.35);
+            --shadow-card: 0 10px 30px rgba(42, 18, 29, 0.08);
+            --radius-pill: 9999px;
+            --radius-card: 20px;
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--blush-bg);
+            color: var(--text-body);
+            min-height: 100vh;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* Headings Font */
+        h1, h2, h3, h4, h5, h6, .font-sen {
+            font-family: 'Sen', sans-serif;
+        }
+
+        /* Navigation Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(251, 249, 250, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-pink-light);
+            padding: 0.85rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-badge {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-pill);
+            background: var(--primary-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-pink);
+        }
+
+        .logo-text h1 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text h1 span {
+            color: var(--primary-pink);
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .stat-badge {
+            background: var(--blush-card);
+            border: 1px solid var(--border-pink-light);
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-pill);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .stat-badge strong {
+            color: var(--primary-pink);
+            font-weight: 700;
+        }
+
+        .sync-btn {
+            background: var(--primary-pink);
+            color: white;
+            border: none;
+            padding: 0.45rem 1.1rem;
+            border-radius: var(--radius-pill);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-pink);
+        }
+
+        .sync-btn:hover {
+            background: var(--primary-pink-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Banner Section (Plum Dark Theme like Main Site) */
+        .hero-section {
+            background: linear-gradient(135deg, var(--plum-darker) 0%, var(--plum-dark) 100%);
+            color: white;
+            padding: 3.5rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(236, 0, 140, 0.25) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow-tag {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--primary-pink);
+            background: rgba(236, 0, 140, 0.15);
+            border: 1px solid rgba(236, 0, 140, 0.3);
+            padding: 0.35rem 1rem;
+            border-radius: var(--radius-pill);
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            color: white;
+        }
+
+        .hero-title span {
+            color: var(--primary-pink);
+        }
+
+        .hero-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* Controls Section */
+        .controls-wrapper {
+            max-width: 1400px;
+            margin: -2rem auto 2rem;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .controls-card {
+            background: #ffffff;
+            border: 1px solid var(--border-pink-light);
+            border-radius: var(--radius-card);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* Folder Filter Pills */
+        .folder-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            align-items: center;
+        }
+
+        .tab-btn {
+            background: var(--blush-bg);
+            border: 1px solid var(--border-pink-light);
+            color: var(--text-heading);
+            padding: 0.55rem 1.25rem;
+            border-radius: var(--radius-pill);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .tab-btn:hover {
+            background: var(--blush-card);
+            border-color: var(--primary-pink);
+            color: var(--primary-pink);
+        }
+
+        .tab-btn.active {
+            background: var(--primary-pink);
+            color: white;
+            border-color: var(--primary-pink);
+            box-shadow: var(--shadow-pink);
+        }
+
+        .tab-count {
+            background: rgba(0, 0, 0, 0.08);
+            color: inherit;
+            padding: 0.15rem 0.55rem;
+            border-radius: var(--radius-pill);
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .tab-btn.active .tab-count {
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+        }
+
+        /* Search & Options Row */
+        .search-bar-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-input-group {
+            position: relative;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .search-input-group i {
+            position: absolute;
+            left: 1.1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .search-input {
+            width: 100%;
+            background: var(--blush-bg);
+            border: 1px solid var(--border-pink-light);
+            padding: 0.7rem 1rem 0.7rem 2.8rem;
+            border-radius: var(--radius-pill);
+            color: var(--text-heading);
+            font-size: 0.9rem;
+            font-family: 'Outfit', sans-serif;
+            outline: none;
+            transition: var(--transition-smooth);
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-pink);
+            background: #ffffff;
+            box-shadow: 0 0 0 3px rgba(236, 0, 140, 0.15);
+        }
+
+        .action-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .select-input {
+            background: var(--blush-bg);
+            border: 1px solid var(--border-pink-light);
+            color: var(--text-heading);
+            padding: 0.65rem 1.25rem;
+            border-radius: var(--radius-pill);
+            font-size: 0.85rem;
+            font-weight: 500;
+            font-family: 'Outfit', sans-serif;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .select-input:focus {
+            border-color: var(--primary-pink);
+        }
+
+        .grid-toggle-btn {
+            background: var(--blush-bg);
+            border: 1px solid var(--border-pink-light);
+            color: var(--text-muted);
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-pill);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .grid-toggle-btn:hover, .grid-toggle-btn.active {
+            background: var(--blush-card);
+            color: var(--primary-pink);
+            border-color: var(--primary-pink);
+        }
+
+        /* Gallery Grid */
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .photo-grid.compact {
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.85rem;
+        }
+
+        .photo-grid.large {
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 1.75rem;
+        }
+
+        /* Photo Card */
+        .photo-card {
+            position: relative;
+            background: #ffffff;
+            border: 1px solid var(--border-pink-light);
+            border-radius: var(--radius-card);
+            overflow: hidden;
+            aspect-ratio: 4 / 3;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(42, 18, 29, 0.04);
+            cursor: pointer;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-pink);
+            box-shadow: 0 15px 35px rgba(236, 0, 140, 0.18);
+        }
+
+        .photo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+            background: var(--blush-card);
+        }
+
+        .photo-card:hover .photo-img {
+            transform: scale(1.06);
+        }
+
+        /* Card Overlay */
+        .photo-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(28, 13, 21, 0.9) 0%, rgba(28, 13, 21, 0.3) 50%, transparent 100%);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        .photo-card:hover .photo-overlay {
+            opacity: 1;
+        }
+
+        .overlay-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .folder-badge {
+            background: var(--primary-pink);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-pill);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .overlay-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 0.5rem;
+        }
+
+        .photo-info {
+            overflow: hidden;
+        }
+
+        .photo-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .overlay-actions {
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .icon-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: var(--radius-pill);
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(8px);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+
+        .icon-btn:hover {
+            background: var(--primary-pink);
+            transform: scale(1.1);
+        }
+
+        /* Skeleton Loading */
+        .skeleton-card {
+            background: linear-gradient(90deg, #fdf2f8 25%, #fbcfe8 50%, #fdf2f8 75%);
+            background-size: 200% 100%;
+            animation: skeleton-loading 1.5s infinite;
+            border-radius: var(--radius-card);
+            aspect-ratio: 4 / 3;
+        }
+
+        @keyframes skeleton-loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #ffffff;
+            border: 1px dashed var(--border-pink-light);
+            border-radius: var(--radius-card);
+            margin: 2rem 0;
+        }
+
+        .empty-icon {
+            font-size: 3rem;
+            color: var(--primary-pink);
+            margin-bottom: 1rem;
+        }
+
+        /* Infinite Scroll Loader */
+        .scroll-loader {
+            text-align: center;
+            padding: 2rem 0;
+            display: none;
+        }
+
+        .scroll-loader.visible {
+            display: block;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            border: 3px solid var(--border-pink-light);
+            border-radius: 50%;
+            border-top-color: var(--primary-pink);
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-pink-light);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background: #ffffff;
+        }
+
+        footer a {
+            color: var(--primary-pink);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0.85rem 1rem;
+            }
+            .hero-title {
+                font-size: 2.25rem;
+            }
+            .controls-wrapper, .gallery-container {
+                padding: 0 1rem 2rem;
+            }
+            .photo-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="../" class="logo-group">
+                <div class="logo-badge">
+                    <i class="fa-solid fa-ribbon"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Pink<span>Walk</span> 2026</h1>
+                    <p>Kathmandu Awareness Walk</p>
+                </div>
+            </a>
+            
+            <div class="nav-actions">
+                <div class="stat-badge">
+                    <i class="fa-solid fa-camera-retro" style="color: var(--primary-pink);"></i>
+                    <span><strong id="total-photos-count">0</strong> Photos</span>
+                </div>
+                <button id="btn-sync-api" class="sync-btn" title="Rescan or Sync Manifest" onclick="fetchGalleryData()">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <span>Sync</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner (Plum Dark Styling matching PinkWalk main website) -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="eyebrow-tag"><i class="fa-solid fa-camera"></i> Official Photography Archive</span>
+            <h2 class="hero-title">PinkWalk 2026 <span>Gallery</span></h2>
+            <p class="hero-subtitle">High-resolution event photos from PinkWalk Kathmandu Valley. Filter by photographer folders or search filenames.</p>
+        </div>
+    </section>
+
+    <!-- Filter & Search Controls -->
+    <section class="controls-wrapper">
+        <div class="controls-card">
+            <!-- Folder Filter Pills -->
+            <div class="folder-tabs" id="folder-tabs">
+                <button class="tab-btn active" data-folder="all">
+                    <i class="fa-solid fa-border-all"></i> All Folders
+                    <span class="tab-count" id="count-all">0</span>
+                </button>
+            </div>
+
+            <!-- Search & Controls -->
+            <div class="search-bar-row">
+                <div class="search-input-group">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" class="search-input" placeholder="Search photos by filename (e.g. 9307)...">
+                </div>
+
+                <div class="action-group">
+                    <select id="sort-select" class="select-input">
+                        <option value="name-asc">Sort: Name (A to Z)</option>
+                        <option value="name-desc">Sort: Name (Z to A)</option>
+                        <option value="random">Sort: Random</option>
+                    </select>
+
+                    <button class="grid-toggle-btn" data-size="compact" title="Compact View">
+                        <i class="fa-solid fa-table-cells"></i>
+                    </button>
+                    <button class="grid-toggle-btn active" data-size="standard" title="Standard View">
+                        <i class="fa-solid fa-border-all"></i>
+                    </button>
+                    <button class="grid-toggle-btn" data-size="large" title="Large View">
+                        <i class="fa-solid fa-square"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Gallery Container -->
+    <main class="gallery-container">
+        <div class="photo-grid" id="photo-grid">
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+        </div>
+
+        <div class="empty-state" id="empty-state" style="display: none;">
+            <i class="fa-solid fa-folder-open empty-icon"></i>
+            <h3 class="font-sen" style="font-size: 1.4rem;">No photos match your filter</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Try adjusting your search query or selecting a different folder.</p>
+        </div>
+
+        <div class="scroll-loader" id="scroll-loader">
+            <div class="spinner"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <a href="https://pinkwalk.github.io" target="_blank">PinkWalk Breast Cancer Awareness Walk</a>. All photos hosted on GitHub.</p>
+    </footer>
+
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    
+    <script>
+        let galleryData = { totalPhotos: 0, folders: [] };
+        let allPhotosList = [];
+        let filteredPhotos = [];
+        let currentFolderFilter = 'all';
+        let currentSearchQuery = '';
+        let currentSort = 'name-asc';
+        let currentPage = 1;
+        const BATCH_SIZE = 36;
+        let isObserverActive = false;
+
+        const photoGrid = document.getElementById('photo-grid');
+        const folderTabsContainer = document.getElementById('folder-tabs');
+        const searchInput = document.getElementById('search-input');
+        const sortSelect = document.getElementById('sort-select');
+        const totalPhotosCountEl = document.getElementById('total-photos-count');
+        const emptyState = document.getElementById('empty-state');
+        const scrollLoader = document.getElementById('scroll-loader');
+
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            compact: false,
+            idle: false,
+            animated: true,
+            showClass: "fancybox-fadeIn",
+            hideClass: "fancybox-fadeOut",
+            Toolbar: {
+                display: {
+                    left: ["infobar"],
+                    middle: [],
+                    right: ["slideshow", "fullscreen", "download", "close"],
+                },
+            },
+            Images: { initialSize: "fit" }
+        });
+
+        async function fetchGalleryData() {
+            try {
+                const response = await fetch('gallery.json?t=' + Date.now());
+                if (!response.ok) throw new Error("Manifest not found");
+                galleryData = await response.json();
+                processGalleryData(galleryData);
+            } catch (err) {
+                console.warn("Could not load gallery.json, attempting GitHub API fallback...", err);
+                await fallbackFetchFromGitHubAPI();
+            }
+        }
+
+        async function fallbackFetchFromGitHubAPI() {
+            try {
+                const repoApiUrl = 'https://api.github.com/repos/pinkwalk/photo/contents/2026';
+                const res = await fetch(repoApiUrl);
+                if (!res.ok) throw new Error("GitHub API rate limited");
+                const contents = await res.json();
+                
+                const folders = [];
+                let totalCount = 0;
+
+                for (const item of contents) {
+                    if (item.type === 'dir') {
+                        const folderRes = await fetch(item.url);
+                        if (folderRes.ok) {
+                            const files = await folderRes.json();
+                            const photos = files
+                                .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f.name))
+                                .map(f => ({
+                                    filename: f.name,
+                                    path: `${item.name}/${f.name}`
+                                }));
+
+                            if (photos.length > 0) {
+                                folders.push({
+                                    id: item.name,
+                                    name: item.name.charAt(0).toUpperCase() + item.name.slice(1),
+                                    photoCount: photos.length,
+                                    photos: photos
+                                });
+                                totalCount += photos.length;
+                            }
+                        }
+                    }
+                }
+
+                galleryData = { year: '2026', totalPhotos: totalCount, folders: folders };
+                processGalleryData(galleryData);
+            } catch (apiErr) {
+                photoGrid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #dc2626;">
+                        <i class="fa-solid fa-circle-exclamation" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <h3>Unable to load photo gallery</h3>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Run <code>node generate_gallery.js</code> to generate <code>gallery.json</code>.</p>
+                    </div>
+                `;
+            }
+        }
+
+        function processGalleryData(data) {
+            totalPhotosCountEl.textContent = data.totalPhotos.toLocaleString();
+            
+            allPhotosList = [];
+            data.folders.forEach(folder => {
+                folder.photos.forEach(photo => {
+                    allPhotosList.push({
+                        ...photo,
+                        folderId: folder.id,
+                        folderName: folder.name
+                    });
+                });
+            });
+
+            renderFolderTabs(data.folders, data.totalPhotos);
+            applyFiltersAndSort();
+        }
+
+        function renderFolderTabs(folders, totalPhotos) {
+            let html = `
+                <button class="tab-btn ${currentFolderFilter === 'all' ? 'active' : ''}" data-folder="all">
+                    <i class="fa-solid fa-border-all"></i> All Photos
+                    <span class="tab-count">${totalPhotos}</span>
+                </button>
+            `;
+
+            folders.forEach(f => {
+                html += `
+                    <button class="tab-btn ${currentFolderFilter === f.id ? 'active' : ''}" data-folder="${f.id}">
+                        <i class="fa-solid fa-folder"></i> ${f.name}
+                        <span class="tab-count">${f.photoCount}</span>
+                    </button>
+                `;
+            });
+
+            folderTabsContainer.innerHTML = html;
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentFolderFilter = btn.dataset.folder;
+                    applyFiltersAndSort();
+                });
+            });
+        }
+
+        function applyFiltersAndSort() {
+            if (currentFolderFilter === 'all') {
+                filteredPhotos = [...allPhotosList];
+            } else {
+                filteredPhotos = allPhotosList.filter(p => p.folderId === currentFolderFilter);
+            }
+
+            if (currentSearchQuery.trim() !== '') {
+                const query = currentSearchQuery.toLowerCase().trim();
+                filteredPhotos = filteredPhotos.filter(p => 
+                    p.filename.toLowerCase().includes(query) || 
+                    p.folderName.toLowerCase().includes(query)
+                );
+            }
+
+            if (currentSort === 'name-asc') {
+                filteredPhotos.sort((a, b) => a.filename.localeCompare(b.filename, undefined, { numeric: true }));
+            } else if (currentSort === 'name-desc') {
+                filteredPhotos.sort((a, b) => b.filename.localeCompare(a.filename, undefined, { numeric: true }));
+            } else if (currentSort === 'random') {
+                filteredPhotos.sort(() => Math.random() - 0.5);
+            }
+
+            currentPage = 1;
+            renderGalleryGrid();
+        }
+
+        function renderGalleryGrid() {
+            photoGrid.innerHTML = '';
+            
+            if (filteredPhotos.length === 0) {
+                emptyState.style.display = 'block';
+                scrollLoader.classList.remove('visible');
+                return;
+            }
+
+            emptyState.style.display = 'none';
+            const initialBatch = filteredPhotos.slice(0, BATCH_SIZE);
+            appendPhotoCards(initialBatch);
+
+            if (filteredPhotos.length > BATCH_SIZE) {
+                scrollLoader.classList.add('visible');
+                setupInfiniteScroll();
+            } else {
+                scrollLoader.classList.remove('visible');
+            }
+        }
+
+        function appendPhotoCards(photos) {
+            const fragment = document.createDocumentFragment();
+
+            photos.forEach(photo => {
+                const card = document.createElement('div');
+                card.className = 'photo-card';
+
+                card.innerHTML = `
+                    <a data-fancybox="gallery" href="${photo.path}" data-caption="${photo.folderName} &bull; ${photo.filename}">
+                        <img src="${photo.path}" alt="${photo.filename}" class="photo-img" loading="lazy" />
+                        <div class="photo-overlay">
+                            <div class="overlay-top">
+                                <span class="folder-badge">${photo.folderName}</span>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div class="photo-info">
+                                    <div class="photo-name">${photo.filename}</div>
+                                </div>
+                                <div class="overlay-actions">
+                                    <span class="icon-btn" title="View Fullscreen">
+                                        <i class="fa-solid fa-expand"></i>
+                                    </span>
+                                    <a href="${photo.path}" download="${photo.filename}" class="icon-btn" title="Download Image" onclick="event.stopPropagation();">
+                                        <i class="fa-solid fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                `;
+
+                fragment.appendChild(card);
+            });
+
+            photoGrid.appendChild(fragment);
+        }
+
+        function setupInfiniteScroll() {
+            if (isObserverActive) return;
+            isObserverActive = true;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const start = currentPage * BATCH_SIZE;
+                        const nextBatch = filteredPhotos.slice(start, start + BATCH_SIZE);
+
+                        if (nextBatch.length > 0) {
+                            currentPage++;
+                            appendPhotoCards(nextBatch);
+                        }
+
+                        if (start + BATCH_SIZE >= filteredPhotos.length) {
+                            scrollLoader.classList.remove('visible');
+                        }
+                    }
+                });
+            }, { rootMargin: '300px' });
+
+            observer.observe(scrollLoader);
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            currentSearchQuery = e.target.value;
+            applyFiltersAndSort();
+        });
+
+        sortSelect.addEventListener('change', (e) => {
+            currentSort = e.target.value;
+            applyFiltersAndSort();
+        });
+
+        document.querySelectorAll('.grid-toggle-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.grid-toggle-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const size = btn.dataset.size;
+                photoGrid.classList.remove('compact', 'large');
+                if (size === 'compact') photoGrid.classList.add('compact');
+                if (size === 'large') photoGrid.classList.add('large');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', fetchGalleryData);
+    </script>
+</body>
+</html>

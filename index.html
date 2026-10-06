@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PinkWalk — Photo Gallery Archive</title>
+    <meta name="description" content="Official PinkWalk Photography Archive - Browse event galleries by year and photographer.">
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Google Fonts: Sen for Headings, Outfit for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sen:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+    <style>
+        :root {
+            --primary-pink: #ec008c;
+            --primary-pink-hover: #d0007b;
+            --blush-bg: #fbf9fa;
+            --blush-card: #fdf2f8;
+            --plum-dark: #2a121d;
+            --plum-darker: #1c0d15;
+            --border-pink-light: #fbcfe8;
+            --text-heading: #1e1319;
+            --text-body: #2d1e26;
+            --text-muted: #6e5d67;
+            --shadow-pink: 0 4px 14px 0 rgba(236, 0, 140, 0.35);
+            --shadow-card: 0 10px 30px rgba(42, 18, 29, 0.08);
+            --radius-pill: 9999px;
+            --radius-card: 20px;
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--blush-bg);
+            color: var(--text-body);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3, h4, .font-sen {
+            font-family: 'Sen', sans-serif;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--plum-darker) 0%, var(--plum-dark) 100%);
+            color: white;
+            padding: 4rem 2rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(236, 0, 140, 0.25) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-badge {
+            width: 56px;
+            height: 56px;
+            border-radius: var(--radius-pill);
+            background: var(--primary-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.6rem;
+            margin: 0 auto 1.25rem;
+            box-shadow: var(--shadow-pink);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+
+        h1 span {
+            color: var(--primary-pink);
+        }
+
+        p.subtitle {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.15rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1100px;
+            width: 100%;
+            margin: -2.5rem auto 3rem;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .grid-years {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .year-card {
+            background: #ffffff;
+            border: 1px solid var(--border-pink-light);
+            border-radius: var(--radius-card);
+            padding: 2.25rem;
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+            position: relative;
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .year-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary-pink);
+            box-shadow: 0 15px 35px rgba(236, 0, 140, 0.18);
+        }
+
+        .year-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .year-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-heading);
+        }
+
+        .badge-status {
+            background: var(--primary-pink);
+            color: white;
+            padding: 0.35rem 0.85rem;
+            border-radius: var(--radius-pill);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: var(--shadow-pink);
+        }
+
+        .year-desc {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.6;
+            margin-bottom: 1.75rem;
+        }
+
+        .year-footer {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-pink);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            padding: 2.5rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-pink-light);
+            background: #ffffff;
+        }
+
+        footer a {
+            color: var(--primary-pink);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-badge">
+                <i class="fa-solid fa-ribbon"></i>
+            </div>
+            <h1>Pink<span>Walk</span> Photography</h1>
+            <p class="subtitle">Community breast cancer awareness walk in Kathmandu Valley. Explore high-resolution photo archives by year.</p>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="section-title font-sen">
+            <i class="fa-solid fa-camera-retro" style="color: var(--primary-pink);"></i> Event Galleries
+        </h2>
+        <div class="grid-years">
+            <a href="2026/index.html" class="year-card">
+                <div>
+                    <div class="year-header">
+                        <span class="year-number font-sen">2026</span>
+                        <span class="badge-status"><i class="fa-solid fa-bolt"></i> Interactive Gallery</span>
+                    </div>
+                    <p class="year-desc">Explore 1,143+ photos from PinkWalk 2026 featuring Abinash Giri & Narayan Thapa galleries with photographer filters, instant search, and full-resolution downloads.</p>
+                </div>
+                <div class="year-footer">
+                    <span>Browse 2026 Gallery</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="2023/photo3/index.html" class="year-card">
+                <div>
+                    <div class="year-header">
+                        <span class="year-number font-sen">2023</span>
+                        <span class="badge-status" style="background: var(--blush-card); color: var(--text-muted); box-shadow: none; border: 1px solid var(--border-pink-light);">Archive</span>
+                    </div>
+                    <p class="year-desc">PinkWalk 2023 event photography by Jitendra Bajracharya.</p>
+                </div>
+                <div class="year-footer" style="color: var(--text-muted);">
+                    <span>Browse 2023 Gallery</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 <a href="https://pinkwalk.github.io" target="_blank">PinkWalk Kathmandu</a>. Official Photo Archive hosted on GitHub.</p>
+    </footer>
+</body>
+</html>

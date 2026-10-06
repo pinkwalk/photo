@@ -1,0 +1,13 @@
+{
+  "name": "pinkwalk-photo-gallery",
+  "version": "1.0.0",
+  "description": "PinkWalk Photo Gallery System for GitHub Pages",
+  "main": "generate_gallery.js",
+  "scripts": {
+    "generate": "node generate_gallery.js",
+    "build:gallery": "node generate_gallery.js"
+  },
+  "keywords": ["photo-gallery", "pinkwalk", "github-pages"],
+  "author": "PinkWalk",
+  "license": "MIT"
+}
