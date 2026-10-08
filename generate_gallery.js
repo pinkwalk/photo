@@ -12,6 +12,7 @@ function formatName(folderName) {
   // "narayanthapa" -> "Narayan Thapa"
   if (folderName === 'abinashgiri') return 'Abinash Giri';
   if (folderName === 'narayanthapa') return 'Narayan Thapa';
+  if (folderName === 'pratyushmanandhar') return 'Pratyush Manandhar';
   
   // Generic fallback: convert camelCase, snake_case, or concatenated words
   return folderName
