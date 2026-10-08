@@ -1,8 +1,8 @@
 {
   "year": "2026",
   "title": "PinkWalk 2026 Photo Gallery",
-  "generatedAt": "2026-10-08T08:59:19.316Z",
-  "totalPhotos": 1050,
+  "generatedAt": "2026-10-08T09:14:56.727Z",
+  "totalPhotos": 1053,
   "folders": [
     {
       "id": "abinashgiri",
@@ -4213,8 +4213,20 @@
     {
       "id": "pratyushmanandhar",
       "name": "Pratyush Manandhar",
-      "photoCount": 2,
+      "photoCount": 5,
       "photos": [
+        {
+          "filename": "DSCF6425.jpeg",
+          "path": "pratyushmanandhar/DSCF6425.jpeg"
+        },
+        {
+          "filename": "DSCF6463.jpeg",
+          "path": "pratyushmanandhar/DSCF6463.jpeg"
+        },
+        {
+          "filename": "DSCF6501.jpeg",
+          "path": "pratyushmanandhar/DSCF6501.jpeg"
+        },
         {
           "filename": "DSCF6605.jpeg",
           "path": "pratyushmanandhar/DSCF6605.jpeg"
